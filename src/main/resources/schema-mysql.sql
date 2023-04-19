@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS accounts (
+  accountNo VARCHAR(10) NOT NULL,
+  accountName VARCHAR(100) NOT NULL
+);
