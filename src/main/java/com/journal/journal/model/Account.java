@@ -1,26 +1,24 @@
 package com.journal.journal.model;
 
 // Importing required classes
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.*;
+import lombok.*;
 
 // Annotations
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 
 public class Account {
 
     @Id
-    private Long accountNo;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer accountID;
+    @Column(nullable = false, unique = true)
+    private String accountNo;
+    @Column(nullable = false)
     private String accountName;
 }
