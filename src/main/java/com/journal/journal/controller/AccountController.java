@@ -2,7 +2,9 @@ package com.journal.journal.controller;
 
 import com.journal.journal.model.Account;
 import com.journal.journal.repository.AccountRepository;
+import com.journal.journal.repository.JournalRepository;
 import com.journal.journal.service.AccountService;
+import com.journal.journal.service.JournalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,7 @@ public class AccountController {
     private AccountService accountService;
     @Autowired
     private AccountRepository accountRepository;
+
 
     // Save account
     @PostMapping("/accounts")
@@ -46,13 +49,5 @@ public class AccountController {
                 account, accountId);
     }
 
-    // Delete account
-    @DeleteMapping("/accounts/{id}")
-    public String deleteAccountById(@PathVariable("id")
-                                       Long accountId)
-    {
-        accountService.deleteAccountById(
-                accountId);
-        return "Deleted Successfully";
-    }
+
 }

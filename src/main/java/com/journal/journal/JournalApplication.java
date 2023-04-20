@@ -26,8 +26,8 @@ public class JournalApplication {
 	public CommandLineRunner demo(AccountRepository repository) {
 		return (args) -> {
 			// populate with demo accounts
-			repository.save(new Account(null,"1001", "Savings"));
-			repository.save(new Account(null,"1002", "Current Account"));
+			repository.save(new Account(null,"10001", "CASH A/C"));
+			repository.save(new Account(null,"20001", "PAYBILL A/C\n"));
 			repository.save(new Account(null,"1003", "Dollar"));
 			repository.save(new Account(null,"1004", "Salary"));
 			repository.save(new Account(null,"1005", "Internet Account"));
