@@ -6,7 +6,6 @@ import com.journal.journal.model.Journal;
 import com.journal.journal.repository.AccountRepository;
 import com.journal.journal.repository.GeneralLedgerRepository;
 import com.journal.journal.repository.JournalRepository;
-import jakarta.persistence.Column;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

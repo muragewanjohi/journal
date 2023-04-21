@@ -5,6 +5,7 @@ package com.journal.journal.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 // Annotations
 @Entity
 @Getter
@@ -15,7 +16,7 @@ import lombok.*;
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer accountID;
     @Column(nullable = false, unique = true)
     private String accountNo;

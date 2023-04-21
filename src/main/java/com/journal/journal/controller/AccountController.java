@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
+
 import java.util.List;
 
 // Annotation
@@ -23,8 +23,7 @@ public class AccountController {
 
     // Save account
     @PostMapping("/accounts")
-    public ResponseEntity<Account> saveAccount(
-            @Valid @RequestBody Account account)
+    public ResponseEntity<Account> saveAccount(@RequestBody Account account)
     {
         Account savedAccount = accountService.saveAccount(account);
         return new ResponseEntity<>(savedAccount, HttpStatus.CREATED);

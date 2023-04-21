@@ -1,7 +1,8 @@
 package com.journal.journal.model;
 
-import jakarta.persistence.*;
 import lombok.*;
+
+import jakarta.persistence.*;
 
 // Annotations
 @Entity
