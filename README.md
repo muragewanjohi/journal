@@ -28,12 +28,24 @@ url:8080/api/v1/ledger
 ```
 
 ## Development
+Requirements:
+1. Docker
+2. Java JDK 17
 
-To start your application in the dev profile, run:
+To start your application in the dev profile, on the docker folder run:
 
 ```
-./mvnw
+docker-compose up
 ```
+
+that will spin a docker container running a mysql instance with the default configuration.
+
+Run the application:
+
+```
+mvn spring-boot:run
+```
+
 Once you run the application, you can find the swagger documentation at the below URL:
 ```
 http://localhost:8080/swagger-ui/index.html
@@ -54,8 +66,6 @@ To ensure everything worked, run:
 ```
 java -jar target/*.jar
 ```
-
-Refer to [Using JHipster in production][] for more details.
 
 ### Packaging as war
 
