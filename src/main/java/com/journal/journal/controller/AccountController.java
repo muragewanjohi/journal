@@ -2,9 +2,7 @@ package com.journal.journal.controller;
 
 import com.journal.journal.model.Account;
 import com.journal.journal.repository.AccountRepository;
-import com.journal.journal.repository.JournalRepository;
-import com.journal.journal.service.AccountService;
-import com.journal.journal.service.JournalService;
+import com.journal.journal.service.account.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.journal.journal.service;
+package com.journal.journal.service.account;
 
 import com.journal.journal.model.Account;
 

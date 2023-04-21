@@ -1,4 +1,4 @@
-package com.journal.journal.service;
+package com.journal.journal.service.journal;
 
 import com.journal.journal.model.Account;
 import com.journal.journal.model.Journal;
@@ -24,7 +24,7 @@ public class JournalServiceImpl implements JournalService{
         Optional<Account> accountCr = Optional.ofNullable(accountRepository.findByAccountNo(journal.getAccountCr()));
         Optional<Account> accountDr = Optional.ofNullable(accountRepository.findByAccountNo(journal.getAccountDr()));
 
-        if (accountCr.isPresent() && accountDr.isPresent()) {
+        if (accountCr.isPresent() && accountDr.isPresent() && accountCr != accountDr) {
             return journalRepository.save(journal);
         }
 
