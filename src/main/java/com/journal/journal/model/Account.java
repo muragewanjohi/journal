@@ -16,7 +16,7 @@ import lombok.*;
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer accountID;
     @Column(nullable = false, unique = true)
     private String accountNo;

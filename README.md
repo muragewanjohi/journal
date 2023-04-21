@@ -5,34 +5,35 @@ A simple Journal System for capturing journals and ledgers.
 WorkFlow:
 1. Create an Account using the accounts url (You can skip this step, as it has been populated with demo accounts)
 ```
-url::8080/api/v1/accounts
+http://localhost:8080/api/v1/accounts
 ```
 2. Get account numbers to be used for creating journals
 ```
-url:8080/api/v1/accounts
+http://localhost:8080/api/v1/accounts
 ```
 3. Use the accounts to create a journal using the journals api
 ```
-url:8080/api/v1/journal
+http://localhost:8080/api/v1/journal
 ```
 Once the journal has been created. A General Ledger will create an entry for Debit and another entry for Credit.
+
 4. Use journal id to reverse a transaction
 ```
-url:8080/api/v1/journal/{id}
+http://localhost:8080/api/v1/journal/{id}
 ```
 Once the journal has been reversed. The journal ledger status changes to reversed and a General Ledger will create a reverse entry for Debit and another entry for Credit.
 5. View all the General Ledger items
 
 ```
-url:8080/api/v1/ledger
+http://localhost:8080/api/v1/ledger
 ```
 
-## Development
+## Local Development
 Requirements:
 1. Docker
 2. Java JDK 17
 
-To start your application in the dev profile, on the docker folder run:
+To start your application run:
 
 ```
 docker-compose up
